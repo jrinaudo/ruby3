@@ -1,0 +1,1426 @@
+MONGODB | Adding localhost:27017 to the cluster.
+  [1m[36m (26.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (15.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{:short_name=>"GB"}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000971118s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$match=>{:short_name=>"GB"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0009383369999999999s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001012057s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.000876654s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.000787091s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.000866784s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.long_name"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0007065s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_omponents.long_name"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.000605147s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0012290889999999998s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"address_components"=>[{"long_name"=>"77713-77735", "short_name"=>"77713-77735", "types"=>["street_number"]}, {"long_name"=>"Dillon Road", "short_name"=>"Dillon Rd", "types"=>["route"]}, {"long_name"=>"Desert Hot Sp...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.09594124999999999s
+MONGODB | localhost:27017 | places_development.count | STARTED | {"count"=>"places", "query"=>{}}
+MONGODB | localhost:27017 | places_development.count | SUCCEEDED | 0.000510356s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.002531839s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0013264149999999998s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}, {:$unwind=>"$types"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001276645s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}, {:$unwind=>"$types"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0018268820000000002s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"address_components"=>[{"long_name"=>"77713-77735", "short_name"=>"77713-77735", "types"=>["street_number"]}, {"long_name"=>"Dillon Road", "short_name"=>"Dillon Rd", "types"=>["route"]}, {"long_name"=>"Desert Hot Sp...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.0066122379999999994s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}, {:$unwind=>"$types"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0019593230000000002s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}, {:$unwind=>"$types"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.002883454s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003588226s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{:long_name=>1}}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.002829364s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{:long_name=>1}}, {:$match=>{:types=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001953896s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$match=>{:types=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004374482s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$match=>{:types=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004989743s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{:long_name=>1, :types=>1}}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0024218919999999997s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$project=>{:long_name=>1, :types=>1}}, {:$match=>{:types=>"country"}}, {:$unwind=>"$address_components"}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0010709189999999998s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$project=>{:long_name=>1, :types=>1}}, {:$match=>{:types=>"country"}}, {:$unwind=>"$address_components.types"}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001450334s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$project=>{:long_name=>1, :types=>1}}, {:$match=>{:types=>"country"}}, {:$unwind=>"$address_components.types"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001149683s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$project=>{:long_name=>1, :types=>1}}, {:$match=>{:types=>"country"}}, {:$unwind=>"$address_components"}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001084193s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$project=>{:long_name=>1, :types=>1, :address_components=>1}}, {:$match=>{:types=>"country"}}, {:$unwind=>"$address_components"}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001811474s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$project=>{:long_name=>1, :types=>1, :address_components=>1}}, {:$match=>{:types=>"country"}}, {:$unwind=>"$address_components.types"}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001634925s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$project=>{:address_components=>1, :long_name=>1, :types=>1}}, {:$match=>{:types=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addToSet=>"$long_name"}}}], "cursor"=>{}}...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.002235025s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.long_name"}, {:$unwind=>"$address_components.types"}, {:$project=>{:long_name=>1}}, {:$match=>{:types=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001577263s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.long_name"}, {:$unwind=>"$address_components.types"}, {:$project=>{:long_name=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$group=>{:_id=>"$_id", :long_names=>{:$addTo...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.00165205s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"address_components"=>[{"long_name"=>"77713-77735", "short_name"=>"77713-77735", "types"=>["street_number"]}, {"long_name"=>"Dillon Road", "short_name"=>"Dillon Rd", "types"=>["route"]}, {"long_name"=>"Desert Hot Sp...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.010325055999999999s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.long_name"}, {:$unwind=>"$address_components.types"}, {:$project=>{"address_components.long_name"=>1, "address_components.types"=>1}}, {:$match=>{"address_components.types"=>"country...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001831663s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.long_name"}, {:$unwind=>"$address_components.types"}, {:$project=>{"address_components.long_name"=>1, "address_components.types"=>1}}, {:$match=>{"address_components.types"=>"country...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.001719295s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.long_name"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.002402696s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.016945037s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>118678792698, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.049986903s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.02037837s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>116023943912, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.104215022s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$project=>{:_id=>0, :long_name=>1, :types=>1}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003310133s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>120066724585, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.004324626s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$project=>{:_id=>0, "address_components.long_name"=>1, "address_components.types"=>1}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003688248s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>118243085855, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.007940294s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$project=>{:_id=>0, :address_components=>1}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004217210000000001s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>117365253734, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.009566286s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.016675578s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>119579642204, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.0507965s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$project=>{:_id=>0, "address_components.long_name"=>1}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0025554270000000003s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>117661570783, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.003680489s
+MONGODB | IOError
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$project=>{:_id=>0, "address_components.long_name"=>1}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004810006s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>118587229776, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.00503589s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.014669709000000001s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>117502106947, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.046396869s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.018164294s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>119553034768, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.0031202559999999996s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$project=>{"address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003138448s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$project=>{"address_components"=>1}}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.012364202s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>119324587341, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.001349538s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$address_components.types"}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.023620929s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>119403980994, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.004622226s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}, {:$match=>{"types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003019665s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.002018452s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$address_components.types"}, {:$match=>{"$address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | FAILED | exception: bad query: BadValue unknown top level operator: $address_components.types (16810) | 0.000869749s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$address_components.types"}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.017141859s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>119310250590, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.007700079s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$address_components.types"}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.02152894s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>117234179146, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.003262705s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$address_components.types"}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.01765035s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>118570607628, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.003284259s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$address_components.types"}, {:$project=>{"address_components"=>1}}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004899172s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>116634772834, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.000950803s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$address_components.types"}, {:$project=>{"address_components.types"=>1}}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.006325140999999999s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>117831794881, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.001317102s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$address_components.types"}, {:$project=>{:_id=>0, "address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004321283s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>119065022637, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.00122996s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components.types"}, {:$project=>{:_id=>0, "address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0020782590000000003s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{:_id=>0, "address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004776733s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>116246528181, "batchSize"=>0, "collection"=>"places"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.004045482s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{:_id=>0, "address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$group=>{:_id...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003078561s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{:_id=>0, "address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$group=>{:_id...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0029319909999999997s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{:_id=>0, "address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$group=>{:_id...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004509414s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{:_id=>0, "address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$group=>{:_id...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.0033443929999999998s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{:_id=>0, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$group=>{:_id=>"$address_components.long_nam...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004296889999999999s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{"address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$group=>{:_id=>"$addre...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003400507s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{"address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$group=>{:_id=>"$addre...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.004058656s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{"address_components.types"=>1, "address_components.long_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$group=>{:_id=>"$addre...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.005082781s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{"address_components.types"=>1, "address_components.short_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$match=>{"address_com...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.005028188s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{"address_components.types"=>1, "address_components.short_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$match=>{"address_com...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003475873s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{"address_components.types"=>1, "address_components.short_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$match=>{"address_com...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003745851s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$unwind=>"$address_components"}, {:$unwind=>"$types"}, {:$project=>{"address_components.types"=>1, "address_components.short_name"=>1}}, {:$match=>{"address_components.types"=>"country"}}, {:$match=>{"address_com...
+MONGODB | localhost:27017 | places_development.aggregate | SUCCEEDED | 0.003461734s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{:_id=>BSON::ObjectId('5b3b5ae927c84908a5000025')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000751842s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{:_id=>BSON::ObjectId('5b3b5ae927c84908a5000024')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000992092s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"places", "indexes"=>[{:key=>{"geometry.geolocation"=>"2dsphere"}, :name=>"geometry.geolocation_2dsphere"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.006209004000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"system.indexes", "filter"=>{:ns=>"places_development.places"}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0008790800000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"system.indexes", "filter"=>{:ns=>"places_development.places"}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000597668s
+MONGODB | localhost:27017 | places_development.dropIndexes | STARTED | {"dropIndexes"=>"places", "index"=>"geometry.geolocation_2dsphere"}
+MONGODB | localhost:27017 | places_development.dropIndexes | SUCCEEDED | 0.001149969s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"system.indexes", "filter"=>{:ns=>"places_development.places"}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000710879s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"places", "indexes"=>[{:key=>{"geometry.geolocation"=>"2dsphere"}, :name=>"geometry.geolocation_2dsphere"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.004129281s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000471055s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000518796s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000546722s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.count | STARTED | {"count"=>"fs.files", "query"=>{}}
+MONGODB | localhost:27017 | places_development.count | SUCCEEDED | 0.0006707709999999999s
+MONGODB | localhost:27017 | places_development.count | STARTED | {"count"=>"fs.files", "query"=>{}}
+MONGODB | localhost:27017 | places_development.count | SUCCEEDED | 0.0006391330000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00049825s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000529683s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.chunks", "indexes"=>[{:key=>{:files_id=>1, :n=>1}, :unique=>true, :name=>"files_id_1_n_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.001474921s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.files", "indexes"=>[{:key=>{:filename=>1, :uploadDate=>1}, :name=>"filename_1_uploadDate_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.0011074709999999998s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x000000031589b8 @document={"_id"=>BSON::ObjectId('5b3c482227c8490f81000000'), "data"=><BSON::Binary:0x25872040 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3c...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.002403629s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x25893980 chunk_size=261120 filename=image1.jpg content_type=image/jpeg id=5b3c482227c8490f81000001 md5=871666ee99b90e51c69af02f77f021aa>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000510996s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000619872s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.009009547s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000583087s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000560018s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005877520000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000626076s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000596548s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000633559s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000834712s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0007011000000000001s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000666791s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000594281s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000727301s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005771940000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00059429s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000589774s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000675778s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000642248s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005981000000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000624339s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000883959s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000642888s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000609794s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000703629s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000610874s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006329790000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005458479999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00057295s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0007740129999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000572899s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0007144590000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000569343s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000546869s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000559298s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000635719s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000611959s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006461969999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005377359999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000595431s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00081486s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000769541s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000682203s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005595750000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000697536s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000773688s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0008145520000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000553156s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0007109999999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006110520000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000667866s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000515436s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000556226s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00065563s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000791992s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000555688s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000678158s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000582832s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000629075s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0007331960000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000574859s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000705089s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00038670699999999997s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0008943989999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0007600010000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006335409999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000674601s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000703292s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000744347s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000837662s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.001029516s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000979789s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000673955s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000835287s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.005597563s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}}}, "multi"=>false, "upsert"=>false}], "writeConcern"=>{:...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000843317s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000658135s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}}}, "multi"=>false, "upsert"=>false}], "writeConcern"=>{:...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000796305s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000487856s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000859067s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}}}, "multi"=>false, "upsert"=>false}], "writeConcern"=>{:...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.0006668889999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000507738s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000498928s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}}}, "multi"=>false, "upsert"=>false}], "writeConcern"=>{:...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000869182s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}}}, "multi"=>false, "upsert"=>false}], "writeConcern"=>{:...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000655241s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}}}, "multi"=>false, "upsert"=>false}], "writeConcern"=>{:...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000679068s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00052973s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}}}, "multi"=>false, "upsert"=>false}], "writeConcern"=>{:...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000896157s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000665079s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00095785s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:place=>BSON::ObjectId('5b3ae8df27c8491798000000'), :location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000735156s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000439418s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000517654s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005423909999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00045191800000000005s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000592574s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005783479999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000836685s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :place=>BSON::ObjectId('5b3ae8df27c8491798000000')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000766723s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006266069999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006887779999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000520677s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000514593s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :place=>BSON::ObjectId('5b3ae8df27c8491798000000')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.0007841629999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000491572s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000533545s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006152680000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3c482227c8490f81000001')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000611282s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"address_components"=>[{"long_name"=>"77713-77735", "short_name"=>"77713-77735", "types"=>["street_number"]}, {"long_name"=>"Dillon Road", "short_name"=>"Dillon Rd", "types"=>["route"]}, {"long_name"=>"Desert Hot Sp...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.007566698s
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005778959999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000260754s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"places", "indexes"=>[{:key=>{"geometry.geolocation"=>"2dsphere"}, :name=>"geometry.geolocation_2dsphere"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.102114803s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"address_components"=>[{"long_name"=>"77713-77735", "short_name"=>"77713-77735", "types"=>["street_number"]}, {"long_name"=>"Dillon Road", "short_name"=>"Dillon Rd", "types"=>["route"]}, {"long_name"=>"Desert Hot Sp...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.011885033s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000613345s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.chunks", "indexes"=>[{:key=>{:files_id=>1, :n=>1}, :unique=>true, :name=>"files_id_1_n_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.0013401029999999998s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.files", "indexes"=>[{:key=>{:filename=>1, :uploadDate=>1}, :name=>"filename_1_uploadDate_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.001084255s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x000000045341f8 @document={"_id"=>BSON::ObjectId('5b3d67cf27c8492afb000027'), "data"=><BSON::Binary:0x36282680 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.002665447s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x36284700 chunk_size=261120 filename=image1.jpg content_type=image/jpeg id=5b3d67cf27c8492afb000028 md5=871666ee99b90e51c69af02f77f021aa>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000471375s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000381886s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x000000044d8470 @document={"_id"=>BSON::ObjectId('5b3d67cf27c8492afb00002b'), "data"=><BSON::Binary:0x36094600 type=generic data=0xffd8ffe1fa454578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.017223952s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x36096860 chunk_size=261120 filename=image4.jpg content_type=image/jpeg id=5b3d67cf27c8492afb00002c md5=2e801d538abc311983d6a7b0a166b6d4>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.00040777399999999996s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000393664s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x0000000444ebd0 @document={"_id"=>BSON::ObjectId('5b3d67cf27c8492afb00003a'), "data"=><BSON::Binary:0x35812960 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.001152628s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x35816080 chunk_size=261120 filename=image2.jpg content_type=image/jpeg id=5b3d67cf27c8492afb00003b md5=41fbaf0bd1db0dc5dcec962951b67f07>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.0005376700000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000324015s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x000000043b6358 @document={"_id"=>BSON::ObjectId('5b3d67cf27c8492afb00003c'), "data"=><BSON::Binary:0x35500540 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.00112935s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x35502720 chunk_size=261120 filename=image3.jpg content_type=image/jpeg id=5b3d67cf27c8492afb00003d md5=165fe2f0184509f99f97bae8ff930a09>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000426663s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00045971s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x0000000435c6f0 @document={"_id"=>BSON::ObjectId('5b3d67cf27c8492afb00003e'), "data"=><BSON::Binary:0x35316660 type=generic data=0xffd8ffe12ffe4578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.001536189s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x35318720 chunk_size=261120 filename=image5.jpg content_type=image/jpeg id=5b3d67cf27c8492afb00003f md5=414e303a9fa5c84f4dabada988c148e1>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.00042981499999999995s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000404756s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000004612228 @document={"_id"=>BSON::ObjectId('5b3d67cf27c8492afb000041'), "data"=><BSON::Binary:0x36737420 type=generic data=0xffd8ffe12c6f4578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.008923906s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x36740900 chunk_size=261120 filename=image6.jpg content_type=image/jpeg id=5b3d67cf27c8492afb000042 md5=3bb9b8a6963159219958397ed5a4f3a1>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.00047783200000000003s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.001123077s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006088020000000001s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000028')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :place=>BSON::ObjectId('5b3d67cf27c8492afb000000')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.0005785499999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-1.86062, 53.81734]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000533685s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00002c')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-1.86062, 53.81734]}, :place=>BSON::ObjectId('5b3d67cf27c8492afb000012')}}, "multi"=>false, "upse...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000476666s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[11.002793200000001, 47.7867336]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00043246100000000003s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00003b')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[11.002793200000001, 47.7867336]}, :place=>BSON::ObjectId('5b3d67cf27c8492afb000006')}}, "multi"=>...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000493176s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[141.11956166666667, 41.451645]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00044503900000000005s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00003d')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[141.11956166666667, 41.451645]}, :place=>BSON::ObjectId('5b3d67cf27c8492afb00000c')}}, "multi"=>f...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000513521s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-75.56733333333334, 39.87416666666667]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000477974s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00003f')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-75.56733333333334, 39.87416666666667]}, :place=>BSON::ObjectId('5b3d67cf27c8492afb00001a')}}, "m...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000509756s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-85.79233333333335, 10.432833333333333]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00049629s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000042')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-85.79233333333335, 10.432833333333333]}, :place=>BSON::ObjectId('5b3d67cf27c8492afb00001f')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000523843s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.006361446999999999s
+  [1m[36m (9.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (8.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (7.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000594207s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000028')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00038034s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d67cf27c8492afb000028')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.001865363s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.files", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000028')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000458942s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.chunks", "deletes"=>[{"q"=>{:files_id=>BSON::ObjectId('5b3d67cf27c8492afb000028')}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000489139s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00002c')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000346298s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d67cf27c8492afb00002c')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.003140479s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>124839654609, "batchSize"=>0, "collection"=>"fs.chunks"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.005920342s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.files", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00002c')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000553377s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.chunks", "deletes"=>[{"q"=>{:files_id=>BSON::ObjectId('5b3d67cf27c8492afb00002c')}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000739689s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00003b')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000347001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d67cf27c8492afb00003b')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000620189s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.files", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00003b')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000399665s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.chunks", "deletes"=>[{"q"=>{:files_id=>BSON::ObjectId('5b3d67cf27c8492afb00003b')}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000473624s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00003d')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000361018s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d67cf27c8492afb00003d')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000640584s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.files", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00003d')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000389047s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.chunks", "deletes"=>[{"q"=>{:files_id=>BSON::ObjectId('5b3d67cf27c8492afb00003d')}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000613892s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00003f')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000416475s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d67cf27c8492afb00003f')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.001087785s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.files", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00003f')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000472527s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.chunks", "deletes"=>[{"q"=>{:files_id=>BSON::ObjectId('5b3d67cf27c8492afb00003f')}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000455956s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000042')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00034270300000000003s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d67cf27c8492afb000042')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.011803102s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>128160611945, "batchSize"=>0, "collection"=>"fs.chunks"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.00294618s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.files", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000042')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.0004990659999999999s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.chunks", "deletes"=>[{"q"=>{:files_id=>BSON::ObjectId('5b3d67cf27c8492afb000042')}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.0006969529999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.009105947s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000000')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000701375s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000001')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000480081s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000002')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.00039785499999999996s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000003')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000420571s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000004')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000450608s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000005')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000392125s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000006')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.0005968740000000001s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000007')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000442099s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000008')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000453674s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000009')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000490543s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00000a')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000398625s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00000b')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000419322s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00000c')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.00043306299999999997s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00000d')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000397207s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00000e')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000546324s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00000f')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000407608s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000010')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.00040944900000000004s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000011')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.00040052100000000004s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000012')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000408609s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000013')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000400339s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000014')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000402457s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000015')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000411091s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000016')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000396607s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000017')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000383766s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000018')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.00040096099999999997s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000019')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000430129s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00001b')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000427828s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00001a')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.0003735s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00001c')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000373217s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00001d')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000336294s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00001e')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.00033565s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb00001f')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000333645s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000020')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.00036204000000000005s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000021')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000423204s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000022')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000362901s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000023')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000437272s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000024')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000465236s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000025')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000602417s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67cf27c8492afb000026')}, "limit"=>1}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.0005406499999999999s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"places", "indexes"=>[{:key=>{"geometry.geolocation"=>"2dsphere"}, :name=>"geometry.geolocation_2dsphere"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.000384657s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"address_components"=>[{"long_name"=>"77713-77735", "short_name"=>"77713-77735", "types"=>["street_number"]}, {"long_name"=>"Dillon Road", "short_name"=>"Dillon Rd", "types"=>["route"]}, {"long_name"=>"Desert Hot Sp...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.009444301s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00041038500000000004s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.chunks", "indexes"=>[{:key=>{:files_id=>1, :n=>1}, :unique=>true, :name=>"files_id_1_n_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.000925807s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.files", "indexes"=>[{:key=>{:filename=>1, :uploadDate=>1}, :name=>"filename_1_uploadDate_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.000959886s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000002cdc6f0 @document={"_id"=>BSON::ObjectId('5b3d67e227c8492b08000027'), "data"=><BSON::Binary:0x23520380 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.001391415s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x23524360 chunk_size=261120 filename=image1.jpg content_type=image/jpeg id=5b3d67e227c8492b08000028 md5=871666ee99b90e51c69af02f77f021aa>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000490031s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000570021s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x000000039413c8 @document={"_id"=>BSON::ObjectId('5b3d67e227c8492b0800002b'), "data"=><BSON::Binary:0x30018080 type=generic data=0xffd8ffe1fa454578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.010762564s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x30020620 chunk_size=261120 filename=image4.jpg content_type=image/jpeg id=5b3d67e227c8492b0800002c md5=2e801d538abc311983d6a7b0a166b6d4>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.0005781040000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000561086s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000003a382b8 @document={"_id"=>BSON::ObjectId('5b3d67e227c8492b0800003a'), "data"=><BSON::Binary:0x30523800 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.001412626s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x30525920 chunk_size=261120 filename=image2.jpg content_type=image/jpeg id=5b3d67e227c8492b0800003b md5=41fbaf0bd1db0dc5dcec962951b67f07>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000615704s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000523033s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000003b65c08 @document={"_id"=>BSON::ObjectId('5b3d67e227c8492b0800003c'), "data"=><BSON::Binary:0x31141440 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.0009010509999999999s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x31143520 chunk_size=261120 filename=image3.jpg content_type=image/jpeg id=5b3d67e227c8492b0800003d md5=165fe2f0184509f99f97bae8ff930a09>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000533657s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000928425s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000003c03458 @document={"_id"=>BSON::ObjectId('5b3d67e227c8492b0800003e'), "data"=><BSON::Binary:0x31464040 type=generic data=0xffd8ffe12ffe4578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.001007553s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x31482940 chunk_size=261120 filename=image5.jpg content_type=image/jpeg id=5b3d67e227c8492b0800003f md5=414e303a9fa5c84f4dabada988c148e1>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000479036s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000550681s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000003cffa78 @document={"_id"=>BSON::ObjectId('5b3d67e227c8492b08000041'), "data"=><BSON::Binary:0x31981280 type=generic data=0xffd8ffe12c6f4578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.0037595989999999998s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x31852660 chunk_size=261120 filename=image6.jpg content_type=image/jpeg id=5b3d67e227c8492b08000042 md5=3bb9b8a6963159219958397ed5a4f3a1>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000489087s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000903039s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00059951s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67e227c8492b08000028')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :place=>BSON::ObjectId('5b3d67e227c8492b08000000')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000545352s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-1.86062, 53.81734]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000514153s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67e227c8492b0800002c')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-1.86062, 53.81734]}, :place=>BSON::ObjectId('5b3d67e227c8492b08000012')}}, "multi"=>false, "upse...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.00044397100000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[11.002793200000001, 47.7867336]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000472899s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67e227c8492b0800003b')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[11.002793200000001, 47.7867336]}, :place=>BSON::ObjectId('5b3d67e227c8492b08000006')}}, "multi"=>...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.00048368200000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[141.11956166666667, 41.451645]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000440402s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67e227c8492b0800003d')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[141.11956166666667, 41.451645]}, :place=>BSON::ObjectId('5b3d67e227c8492b0800000c')}}, "multi"=>f...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000437583s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-75.56733333333334, 39.87416666666667]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000455684s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67e227c8492b0800003f')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-75.56733333333334, 39.87416666666667]}, :place=>BSON::ObjectId('5b3d67e227c8492b0800001a')}}, "m...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.00044219500000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-85.79233333333335, 10.432833333333333]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000433468s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d67e227c8492b08000042')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-85.79233333333335, 10.432833333333333]}, :place=>BSON::ObjectId('5b3d67e227c8492b0800001f')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000420144s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.005990581s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"address_components"=>[{"long_name"=>"77713-77735", "short_name"=>"77713-77735", "types"=>["street_number"]}, {"long_name"=>"Dillon Road", "short_name"=>"Dillon Rd", "types"=>["route"]}, {"long_name"=>"Desert Hot Sp...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.019627182s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.files", "deletes"=>[{"q"=>{}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.001232927s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.003055108s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"system.indexes", "filter"=>{:ns=>"places_development.places"}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000718516s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"system.indexes", "filter"=>{:ns=>"places_development.places"}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000533003s
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.files", "deletes"=>[{"q"=>{}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000562953s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.00041435999999999996s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000492594s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00039495999999999997s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"system.indexes", "filter"=>{:ns=>"places_development.places"}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00050686s
+MONGODB | localhost:27017 | places_development.dropIndexes | STARTED | {"dropIndexes"=>"places", "index"=>"geometry.geolocation_2dsphere"}
+MONGODB | localhost:27017 | places_development.dropIndexes | SUCCEEDED | 0.0012478900000000002s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"places", "indexes"=>[{:key=>{"geometry.geolocation"=>"2dsphere"}, :name=>"geometry.geolocation_2dsphere"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.0012898550000000001s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"address_components"=>[{"long_name"=>"77713-77735", "short_name"=>"77713-77735", "types"=>["street_number"]}, {"long_name"=>"Dillon Road", "short_name"=>"Dillon Rd", "types"=>["route"]}, {"long_name"=>"Desert Hot Sp...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.006882027s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000705332s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.chunks", "indexes"=>[{:key=>{:files_id=>1, :n=>1}, :unique=>true, :name=>"files_id_1_n_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.000599815s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.files", "indexes"=>[{:key=>{:filename=>1, :uploadDate=>1}, :name=>"filename_1_uploadDate_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.0005335989999999999s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000003bf91b0 @document={"_id"=>BSON::ObjectId('5b3d6e7527c8492be1000027'), "data"=><BSON::Binary:0x31443480 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.006439327s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x31448320 chunk_size=261120 filename=image1.jpg content_type=image/jpeg id=5b3d6e7527c8492be1000028 md5=871666ee99b90e51c69af02f77f021aa>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.0006452200000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000578549s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x0000000358bdc8 @document={"_id"=>BSON::ObjectId('5b3d6e7527c8492be100002b'), "data"=><BSON::Binary:0x28079820 type=generic data=0xffd8ffe1fa454578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.033570302s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x28082120 chunk_size=261120 filename=image4.jpg content_type=image/jpeg id=5b3d6e7527c8492be100002c md5=2e801d538abc311983d6a7b0a166b6d4>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.0008842769999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000766611s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000004f57a68 @document={"_id"=>BSON::ObjectId('5b3d6e7527c8492be100003a'), "data"=><BSON::Binary:0x41598380 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.001076156s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x41642200 chunk_size=261120 filename=image2.jpg content_type=image/jpeg id=5b3d6e7527c8492be100003b md5=41fbaf0bd1db0dc5dcec962951b67f07>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000631724s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000389089s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000004e1e8b8 @document={"_id"=>BSON::ObjectId('5b3d6e7527c8492be100003c'), "data"=><BSON::Binary:0x40957100 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.001628041s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x40959080 chunk_size=261120 filename=image3.jpg content_type=image/jpeg id=5b3d6e7527c8492be100003d md5=165fe2f0184509f99f97bae8ff930a09>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000475682s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000481924s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000004d4cf20 @document={"_id"=>BSON::ObjectId('5b3d6e7527c8492be100003e'), "data"=><BSON::Binary:0x40527820 type=generic data=0xffd8ffe12ffe4578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.002015959s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x40529900 chunk_size=261120 filename=image5.jpg content_type=image/jpeg id=5b3d6e7527c8492be100003f md5=414e303a9fa5c84f4dabada988c148e1>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000531538s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006309800000000001s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000004c6be08 @document={"_id"=>BSON::ObjectId('5b3d6e7527c8492be1000041'), "data"=><BSON::Binary:0x40066900 type=generic data=0xffd8ffe12c6f4578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.015358544s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x40085300 chunk_size=261120 filename=image6.jpg content_type=image/jpeg id=5b3d6e7527c8492be1000042 md5=3bb9b8a6963159219958397ed5a4f3a1>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000640051s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0012912730000000001s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000777305s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d6e7527c8492be1000028')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :place=>BSON::ObjectId('5b3d6e7527c8492be1000000')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.001972483s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-1.86062, 53.81734]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000582532s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d6e7527c8492be100002c')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-1.86062, 53.81734]}, :place=>BSON::ObjectId('5b3d6e7527c8492be1000012')}}, "multi"=>false, "upse...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000626215s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[11.002793200000001, 47.7867336]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000521831s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d6e7527c8492be100003b')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[11.002793200000001, 47.7867336]}, :place=>BSON::ObjectId('5b3d6e7527c8492be1000006')}}, "multi"=>...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000530425s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[141.11956166666667, 41.451645]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00050332s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d6e7527c8492be100003d')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[141.11956166666667, 41.451645]}, :place=>BSON::ObjectId('5b3d6e7527c8492be100000c')}}, "multi"=>f...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000431623s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-75.56733333333334, 39.87416666666667]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0004956019999999999s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d6e7527c8492be100003f')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-75.56733333333334, 39.87416666666667]}, :place=>BSON::ObjectId('5b3d6e7527c8492be100001a')}}, "m...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000614403s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-85.79233333333335, 10.432833333333333]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000482536s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d6e7527c8492be1000042')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-85.79233333333335, 10.432833333333333]}, :place=>BSON::ObjectId('5b3d6e7527c8492be100001f')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000556171s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.010971121s
+  [1m[36m (12.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (9.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (9.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (9.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (9.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"fs.files", "deletes"=>[{"q"=>{}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.000961762s
+MONGODB | localhost:27017 | places_development.delete | STARTED | {"delete"=>"places", "deletes"=>[{"q"=>{}, "limit"=>0}], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.delete | SUCCEEDED | 0.001562519s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00048359600000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000315633s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"system.indexes", "filter"=>{:ns=>"places_development.places"}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000418657s
+MONGODB | localhost:27017 | places_development.dropIndexes | STARTED | {"dropIndexes"=>"places", "index"=>"geometry.geolocation_2dsphere"}
+MONGODB | localhost:27017 | places_development.dropIndexes | SUCCEEDED | 0.000672014s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"places", "indexes"=>[{:key=>{"geometry.geolocation"=>"2dsphere"}, :name=>"geometry.geolocation_2dsphere"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.000663273s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"places", "documents"=>[{"address_components"=>[{"long_name"=>"77713-77735", "short_name"=>"77713-77735", "types"=>["street_number"]}, {"long_name"=>"Dillon Road", "short_name"=>"Dillon Rd", "types"=>["route"]}, {"long_name"=>"Desert Hot Sp...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.006320668s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000524817s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.chunks", "indexes"=>[{:key=>{:files_id=>1, :n=>1}, :unique=>true, :name=>"files_id_1_n_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.000471334s
+MONGODB | localhost:27017 | places_development.createIndexes | STARTED | {"createIndexes"=>"fs.files", "indexes"=>[{:key=>{:filename=>1, :uploadDate=>1}, :name=>"filename_1_uploadDate_1"}]}
+MONGODB | localhost:27017 | places_development.createIndexes | SUCCEEDED | 0.000353964s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x000000051a2958 @document={"_id"=>BSON::ObjectId('5b3d712527c8492d96000027'), "data"=><BSON::Binary:0x42800560 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.003750146s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x42804160 chunk_size=261120 filename=image1.jpg content_type=image/jpeg id=5b3d712527c8492d96000028 md5=871666ee99b90e51c69af02f77f021aa>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000478028s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000729349s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x000000051077a0 @document={"_id"=>BSON::ObjectId('5b3d712527c8492d9600002b'), "data"=><BSON::Binary:0x42482700 type=generic data=0xffd8ffe1fa454578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.018167896000000003s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x42485880 chunk_size=261120 filename=image4.jpg content_type=image/jpeg id=5b3d712527c8492d9600002c md5=2e801d538abc311983d6a7b0a166b6d4>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000533625s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000395281s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x0000000505e380 @document={"_id"=>BSON::ObjectId('5b3d712527c8492d9600003a'), "data"=><BSON::Binary:0x42136060 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000990968s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x42138440 chunk_size=261120 filename=image2.jpg content_type=image/jpeg id=5b3d712527c8492d9600003b md5=41fbaf0bd1db0dc5dcec962951b67f07>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.0005118849999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000376227s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000004fdf5f8 @document={"_id"=>BSON::ObjectId('5b3d712527c8492d9600003c'), "data"=><BSON::Binary:0x41876280 type=generic data=0xffd8ffe000104a46...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.001352667s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x41878100 chunk_size=261120 filename=image3.jpg content_type=image/jpeg id=5b3d712527c8492d9600003d md5=165fe2f0184509f99f97bae8ff930a09>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000470479s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000416903s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x00000004f74d48 @document={"_id"=>BSON::ObjectId('5b3d712527c8492d9600003e'), "data"=><BSON::Binary:0x41658140 type=generic data=0xffd8ffe12ffe4578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.00180135s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x41663180 chunk_size=261120 filename=image5.jpg content_type=image/jpeg id=5b3d712527c8492d9600003f md5=414e303a9fa5c84f4dabada988c148e1>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000542991s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000438668s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.chunks", "documents"=>[#<Mongo::Grid::File::Chunk:0x000000051e2aa8 @document={"_id"=>BSON::ObjectId('5b3d712527c8492d96000041'), "data"=><BSON::Binary:0x42931660 type=generic data=0xffd8ffe12c6f4578...>, "files_id"=>BSON::ObjectId('5b3d...
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.008597294s
+MONGODB | localhost:27017 | places_development.insert | STARTED | {"insert"=>"fs.files", "documents"=>[#<Mongo::Grid::File::Info:0x42934140 chunk_size=261120 filename=image6.jpg content_type=image/jpeg id=5b3d712527c8492d96000042 md5=3bb9b8a6963159219958397ed5a4f3a1>], "writeConcern"=>{:w=>1}, "ordered"=>true}
+MONGODB | localhost:27017 | places_development.insert | SUCCEEDED | 0.000500483s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00093573s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000589729s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d712527c8492d96000028')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-116.30161960177952, 33.87546081542969]}, :place=>BSON::ObjectId('5b3d712527c8492d96000000')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000588874s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-1.86062, 53.81734]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000525155s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600002c')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-1.86062, 53.81734]}, :place=>BSON::ObjectId('5b3d712527c8492d96000012')}}, "multi"=>false, "upse...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000512062s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[11.002793200000001, 47.7867336]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005121s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003b')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[11.002793200000001, 47.7867336]}, :place=>BSON::ObjectId('5b3d712527c8492d96000006')}}, "multi"=>...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.00045029399999999995s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[141.11956166666667, 41.451645]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00044595400000000003s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003d')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[141.11956166666667, 41.451645]}, :place=>BSON::ObjectId('5b3d712527c8492d9600000c')}}, "multi"=>f...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.000396404s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-75.56733333333334, 39.87416666666667]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000502588s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003f')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-75.56733333333334, 39.87416666666667]}, :place=>BSON::ObjectId('5b3d712527c8492d9600001a')}}, "m...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.00040354800000000005s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{"geometry.geolocation"=>{:$near=>{:$geometry=>{:type=>"Point", :coordinates=>[-85.79233333333335, 10.432833333333333]}, :$maxDistance=>1609.34}}}, "projection"=>{:_id=>1}, "limit"=>1}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000467083s
+MONGODB | localhost:27017 | places_development.update | STARTED | {"update"=>"fs.files", "updates"=>[{"q"=>{:_id=>BSON::ObjectId('5b3d712527c8492d96000042')}, "u"=>{:metadata=>{:location=>{:type=>"Point", :coordinates=>[-85.79233333333335, 10.432833333333333]}, :place=>BSON::ObjectId('5b3d712527c8492d9600001f')}}, "...
+MONGODB | localhost:27017 | places_development.update | SUCCEEDED | 0.00046587s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0063336s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000020')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00032549s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000021')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000340446s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000022')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00027770899999999995s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000025')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000274662s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000026')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00024842s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000c')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000311686s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000d')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000275784s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000e')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000265758s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000f')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00030908899999999997s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000010')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00026246900000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000011')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000289045s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000012')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000341972s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000013')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000283699s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000014')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0002609s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000015')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00027726700000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000016')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000308868s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000017')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000287506s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000018')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00030162699999999995s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000019')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000280117s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001a')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000307247s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001b')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00026711199999999996s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001c')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000282668s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001d')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000273595s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001e')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000337502s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001f')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000425633s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000023')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000327826s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000024')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000353864s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000000')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.001227746s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000001')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00033937100000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000002')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000651005s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000003')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000977813s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000004')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00031877299999999995s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000005')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00027439s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000006')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00043208900000000003s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000007')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000327945s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000008')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000355698s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000009')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000299569s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000a')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00037024299999999997s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000b')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000396225s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.013830664s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000020')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00047101900000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000021')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000347114s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000022')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00032165000000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000025')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00033515499999999996s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000026')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00038588399999999997s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000c')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00037629s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000d')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00031573399999999997s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000e')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00034394s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000f')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000347405s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000010')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000261179s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000011')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000307773s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000012')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000333239s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000013')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000391077s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000014')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00039882400000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000015')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000427329s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000016')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000562455s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000017')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000461692s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000018')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00058497s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000019')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00037687s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001a')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00050365s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001b')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000520736s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001c')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000368244s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001d')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000400947s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001e')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000272717s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001f')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00074714s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000023')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000416218s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000024')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000315048s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000000')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000338794s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000001')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00029834999999999996s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000002')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00030784s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000003')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000307577s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000004')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0003827s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000005')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000688977s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000006')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000753224s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000007')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000382714s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000008')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000338391s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000009')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000416853s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000a')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0005469779999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000b')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0002752s
+
+
+Started GET "/" for 186.141.135.189 at 2018-07-05 01:19:38 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 34ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos/1/show" for 186.141.135.189 at 2018-07-05 01:19:50 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered photos/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 599ms (Views: 598.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 186.141.135.189 at 2018-07-05 01:19:51 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 186.141.135.189 at 2018-07-05 01:19:51 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/photos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 186.141.135.189 at 2018-07-05 01:19:51 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 186.141.135.189 at 2018-07-05 01:19:51 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 186.141.135.189 at 2018-07-05 01:19:52 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/photos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 186.141.135.189 at 2018-07-05 01:19:52 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 186.141.135.189 at 2018-07-05 01:19:52 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00345959s
+
+
+Started GET "/photos/56554251e301d0ed8c00003f/show" for 186.141.135.189 at 2018-07-05 01:21:03 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"56554251e301d0ed8c00003f"}
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('56554251e301d0ed8c00003f')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006611s
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `contents' for nil:NilClass
+Did you mean?  concern):
+  app/controllers/photos_controller.rb:4:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.0ms)
+
+
+Started GET "/photos/5b3d712527c8492d9600003b/show" for 186.141.135.189 at 2018-07-05 01:21:36 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5b3d712527c8492d9600003b"}
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003b')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000580923s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003b')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0006162349999999999s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d712527c8492d9600003b')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0010979009999999999s
+  Rendered text template (0.0ms)
+Sent data  (9.0ms)
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos/5b3d712527c8492d9600003b/show" for 186.141.137.149 at 2018-07-05 01:24:17 +0000
+Cannot render console from 186.141.137.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5b3d712527c8492d9600003b"}
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003b')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000886166s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003b')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000539422s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d712527c8492d9600003b')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.001269171s
+  Rendered text template (0.0ms)
+Sent data  (5.4ms)
+Completed 200 OK in 16ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for 186.141.137.149 at 2018-07-05 01:24:18 +0000
+Cannot render console from 186.141.137.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PlacesController#index as HTML
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.018340919s
+  Rendered places/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 95ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for 186.141.137.149 at 2018-07-05 01:25:11 +0000
+Cannot render console from 186.141.137.149! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PlacesController#index as HTML
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.020730886s
+  Rendered places/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/places/app/views/places/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  app/views/places/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.4ms)
+
+
+Started GET "/places" for 186.141.135.189 at 2018-07-05 01:26:27 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PlacesController#index as HTML
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"places", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.008145441s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000020')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000682872s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000021')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00031356900000000003s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000022')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000303172s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000025')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000332479s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000026')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000321087s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000c')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000379284s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000d')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000364609s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000e')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000313117s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000f')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000273778s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000010')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00027837099999999997s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000011')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00030370600000000005s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000012')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00047347899999999996s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000013')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00027818s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000014')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000492484s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000015')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00030492800000000005s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000016')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000295566s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000017')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000350322s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000018')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000337613s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000019')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000361973s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001a')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000380759s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001b')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00030380299999999995s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001c')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00029538s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001d')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000330131s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001e')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000321861s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600001f')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000377969s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000023')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00030112600000000003s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000024')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000320256s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000000')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00036991000000000004s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000001')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000351993s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000002')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000401297s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000003')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000334956s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000004')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00035022700000000005s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000005')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000288093s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000006')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000378041s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000007')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00026739099999999996s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000008')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000269658s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d96000009')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000408738s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000a')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000336557s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{"metadata.place"=>BSON::ObjectId('5b3d712527c8492d9600000b')}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00032773700000000004s
+  Rendered places/index.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 88ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos/5b3d712527c8492d9600002c/show/" for 186.141.135.189 at 2018-07-05 01:26:27 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5b3d712527c8492d9600002c"}
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600002c')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.002101288s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600002c')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.001420207s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d712527c8492d9600002c')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.004011216000000001s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>105955586742, "batchSize"=>0, "collection"=>"fs.chunks"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.005837679s
+  Rendered text template (0.0ms)
+Sent data  (0.9ms)
+Completed 200 OK in 29ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos/5b3d712527c8492d9600003d/show/" for 186.141.135.189 at 2018-07-05 01:26:28 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5b3d712527c8492d9600003d"}
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003d')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000505298s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003d')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000421576s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d712527c8492d9600003d')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0013839520000000001s
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos/5b3d712527c8492d9600003f/show/" for 186.141.135.189 at 2018-07-05 01:26:28 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5b3d712527c8492d9600003f"}
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003f')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000458512s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003f')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00034931299999999997s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d712527c8492d9600003f')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0015221330000000002s
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos/5b3d712527c8492d96000042/show/" for 186.141.135.189 at 2018-07-05 01:26:28 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5b3d712527c8492d96000042"}
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d96000042')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000469857s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d96000042')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000367687s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d712527c8492d96000042')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.013238247s
+MONGODB | localhost:27017 | places_development.getMore | STARTED | {"getMore"=>104899784512, "batchSize"=>0, "collection"=>"fs.chunks"}
+MONGODB | localhost:27017 | places_development.getMore | SUCCEEDED | 0.003179003s
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 28ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos/5b3d712527c8492d96000028/show/" for 186.141.135.189 at 2018-07-05 01:26:28 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5b3d712527c8492d96000028"}
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d96000028')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000536312s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d96000028')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.00031992800000000003s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d712527c8492d96000028')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.0025926979999999996s
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos/5b3d712527c8492d9600003b/show/" for 186.141.135.189 at 2018-07-05 01:26:28 +0000
+Cannot render console from 186.141.135.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5b3d712527c8492d9600003b"}
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003b')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000450238s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{:_id=>BSON::ObjectId('5b3d712527c8492d9600003b')}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000315606s
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.chunks", "filter"=>{"files_id"=>BSON::ObjectId('5b3d712527c8492d9600003b')}, "sort"=>{"n"=>1}}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000939417s
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.0ms)
